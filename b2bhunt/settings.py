@@ -25,7 +25,7 @@ SECRET_KEY = '0t_#x9eo%yv$yxn!4j9ok0*ebjg_bn=y^-hxa=yfz@o+c*tk!%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.b2bleadhut.com']
 
 
 # Application definition
