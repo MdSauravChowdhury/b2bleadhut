@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     # project own app
     'base_app',
     'service',
+    
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,6 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Thart Party App
+    'fontawesome_5',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
