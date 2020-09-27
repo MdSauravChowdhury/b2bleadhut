@@ -20,19 +20,23 @@
   <div class="container">
    <div class="row justify-content-center pb-5">
     <div class="col-md-6 heading-section text-center ftco-animate">
-      <h2 class="mb-4">Our Exclusive <span>IT Solution</span> Services</h2>
+      <h2 class="mb-4">Our Exclusive <span>B2B Lead</span> Services</h2>
     </div>
   </div>
   <div class="row d-flex no-gutters">
+
+    {% for item in service %}
     <div class="col-md-3 d-flex align-self-stretch ftco-animate">
       <div class="media block-6 services d-block">
        <div class="line"></div>
        <div class="icon"><span class="flaticon-web-programming"></span></div>
        <div class="media-body">
-        <h3 class="heading mb-3">Web Development</h3>
-        <p>	203 Fake St. Mountain View, San Francisco, California, USA</p>
+        <h3 class="heading mb-3">{{ item.title }}</h3>
+        <p>{{ item.details }}</p>
       </div>
-    </div>      
+    </div>  
+    {% endfor %}
+
   </div>
   <div class="col-md-3 d-flex align-self-stretch ftco-animate">
     <div class="media block-6 services d-block">
@@ -54,6 +58,7 @@
   </div>
 </div>      
 </div>
+
 <div class="col-md-3 d-flex align-self-stretch ftco-animate">
   <div class="media block-6 services d-block">
    <div class="line"></div>
@@ -62,7 +67,8 @@
     <h3 class="heading mb-3">UX/UI Strategy</h3>
     <p>A small river named Duden flows by their place and supplies.</p>
   </div>
-</div>      
+</div> 
+
 </div>
 </div>
 </div>
@@ -76,61 +82,24 @@
     </div>
   </div>
   <div class="row">
+
+
+
+    {% for item in strategic_work %}
    <div class="col-md-6 col-lg-3 ftco-animate">
     <div class="project">
      <div class="img">
-      <img src="images/work-1.jpg" class="img-fluid" alt="Colorlib Template">
+      <img src="{{ item.image.url }}" class="img-fluid" alt="b2b Template">
     </div>
     <div class="text text-center">
-      <span>Web Development</span>
-      <h3><a href="project.html">Best Solution for Information Technology</a></h3>
+      <span>{{ item.category.name }}</span>
+      <h3><a href="project.html">{{ item.title }}</a></h3>
     </div>
-    <a href="images/work-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-      <span class="fa fa-expand"></span>
-    </a>
   </div>
-</div>
-<div class="col-md-6 col-lg-3 ftco-animate">
-  <div class="project">
-   <div class="img">
-    <img src="images/work-2.jpg" class="img-fluid" alt="Colorlib Template">
   </div>
-  <div class="text text-center">
-    <span>Web Application</span>
-    <h3><a href="project.html">Creative Idea Build Up</a></h3>
-  </div>
-  <a href="images/work-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-    <span class="fa fa-expand"></span>
-  </a>
-</div>
-</div>
-<div class="col-md-6 col-lg-3 ftco-animate">
-  <div class="project">
-   <div class="img">
-    <img src="images/work-3.jpg" class="img-fluid" alt="Colorlib Template">
-  </div>
-  <div class="text text-center">
-    <span>Web Development</span>
-    <h3><a href="project.html">Web Design Concept &amp; Web Analysis</a></h3>
-  </div>
-  <a href="images/work-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-    <span class="fa fa-expand"></span>
-  </a>
-</div>
-</div>
-<div class="col-md-6 col-lg-3 ftco-animate">
-  <div class="project">
-   <div class="img">
-    <img src="images/work-4.jpg" class="img-fluid" alt="Colorlib Template">
-  </div>
-  <div class="text text-center">
-    <span>UI/UX Strategy</span>
-    <h3><a href="project.html">Strategy for Enduring Customer Relationships</a></h3>
-  </div>
-  <a href="images/work-4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-    <span class="fa fa-expand"></span>
-  </a>
-</div>
+  {% endfor %}
+
+
 </div>
 </div>
 </div>
@@ -153,55 +122,16 @@
    <h2 class="mb-3">Frequently Asks Questions</h2>
  </div>
  <div id="accordion" class="myaccordion w-100" aria-multiselectable="true">
-  <div class="card">
-    <div class="card-header p-0" id="headingOne">
-      <h2 class="mb-0">
-        <button href="#collapseOne" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="true" aria-controls="collapseOne">
-         <p class="mb-0">How can we help your business?</p>
-         <i class="fa" aria-hidden="true"></i>
-       </button>
-     </h2>
-   </div>
-   <div class="collapse show" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
-    <div class="card-body py-3 px-0">
-     <ol>
-      <li>Far far away, behind the word mountains</li>
-      <li>Consonantia, there live the blind texts</li>
-      <li>When she reached the first hills of the Italic Mountains</li>
-      <li>Bookmarksgrove, the headline of Alphabet Village</li>
-      <li>Separated they live in Bookmarksgrove right</li>
-    </ol>
-  </div>
-</div>
-</div>
 
-<div class="card">
-  <div class="card-header p-0" id="headingTwo" role="tab">
-    <h2 class="mb-0">
-      <button href="#collapseTwo" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
-       <p class="mb-0">How long does it take to build a website?</p>
-       <i class="fa" aria-hidden="true"></i>
-     </button>
-   </h2>
- </div>
- <div class="collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
-  <div class="card-body py-3 px-0">
-   <ol>
-    <li>Far far away, behind the word mountains</li>
-    <li>Consonantia, there live the blind texts</li>
-    <li>When she reached the first hills of the Italic Mountains</li>
-    <li>Bookmarksgrove, the headline of Alphabet Village</li>
-    <li>Separated they live in Bookmarksgrove right</li>
-  </ol>
-</div>
-</div>
-</div>
 
+{% for item in service_price %}
+
+{% if item.draft == True %}
 <div class="card">
   <div class="card-header p-0" id="headingThree" role="tab">
     <h2 class="mb-0">
       <button href="#collapseThree" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseThree">
-       <p class="mb-0">Can I help your IT Solution for business?</p>
+       <p class="mb-0">{{ item.title }}</p>
        <i class="fa" aria-hidden="true"></i>
      </button>
    </h2>
@@ -209,30 +139,20 @@
  <div class="collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingTwo">
   <div class="card-body py-3 px-0">
    <ol>
-    <li>Far far away, behind the word mountains</li>
-    <li>Consonantia, there live the blind texts</li>
-    <li>When she reached the first hills of the Italic Mountains</li>
-    <li>Bookmarksgrove, the headline of Alphabet Village</li>
-    <li>Separated they live in Bookmarksgrove right</li>
+    <li>{{ item.content|safe }}</li>
+
   </ol>
+
+  <a href="" class="btn btn-primary">Contact</a>
+  <a href="" class="btn btn-primary">Order</a>
 </div>
+{% endif %}
+
+{% endfor %}
 </div>
 </div>
 
-<div class="card">
-  <div class="card-header p-0" id="headingFour" role="tab">
-    <h2 class="mb-0">
-      <button href="#collapseFour" class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link" data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseFour">
-       <p class="mb-0">What are those requirements for ITSolutions?</p>
-       <i class="fa" aria-hidden="true"></i>
-     </button>
-   </h2>
- </div>
- <div class="collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingTwo">
-  <div class="card-body py-3 px-0">
-   <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
- </div>
-</div>
+
 </div>
 </div>
 </div>
