@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # project own app
     'base_app',
+    'service',
 
     'django.contrib.admin',
     'django.contrib.auth',
