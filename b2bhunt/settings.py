@@ -20,13 +20,13 @@ TEMPLATES_DIRS = os.path.join(BASE_DIR, 'template')
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '0t_#x9eo%yv$yxn!43423434j9ok0*ebjg_bn=y^-hxa=yfz@o+c*tk!%'
+SECRET_KEY = '0t_#x9eo%yv$yxn!43423434j9ok748fds00///??0*ebjg_bn=y^-hxa=yfz@o+c*tk!%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['www.b2bleadhut.com']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -82,23 +82,23 @@ WSGI_APPLICATION = 'b2bhunt.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'b2b_db',
-#         'USER': 'mdimranali',
-#         'PASSWORD': '**%%$$b2b_db_@@##..//??',
-#         'HOST': 'mdimranali.mysql.pythonanywhere-services.com',
-#         'PORT': '3306',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'b2b_db',
+        'USER': 'mdimranali',
+        'PASSWORD': '**%%$$b2b_db_@@##..//??',
+        'HOST': 'mdimranali.mysql.pythonanywhere-services.com',
+        'PORT': '3306',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -137,11 +137,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static')
+# ]
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
