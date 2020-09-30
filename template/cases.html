@@ -24,118 +24,25 @@
     </div>
   </div>
   <div class="row">
+
+
+    {% for item in strategic_work %}
    <div class="col-md-6 col-lg-3 ftco-animate">
     <div class="project">
      <div class="img">
-      <img src="{% static 'images/work-1.jpg' %}" class="img-fluid" alt="Colorlib Template">
+      <img src="{{ item.image.url }}" class="img-fluid" alt="b2b Template">
     </div>
     <div class="text text-center">
-      <span>Web Development</span>
-      <h3><a href="project.html">Best Solution for Information Technology</a></h3>
+      <span>{{ item.category.name }}</span>
+      <h3><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></h3>
     </div>
-    <a href="{% static 'images/work-1.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
-      <span class="fa fa-expand"></span>
-    </a>
   </div>
-</div>
-<div class="col-md-6 col-lg-3 ftco-animate">
-  <div class="project">
-   <div class="img">
-    <img src="{% static 'images/work-2.jpg' %}" class="img-fluid" alt="Colorlib Template">
   </div>
-  <div class="text text-center">
-    <span>Web Application</span>
-    <h3><a href="project.html">Creative Idea Build Up</a></h3>
-  </div>
-  <a href="{% static 'images/work-2.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
-    <span class="fa fa-expand"></span>
-  </a>
-</div>
-</div>
-<div class="col-md-6 col-lg-3 ftco-animate">
-  <div class="project">
-   <div class="img">
-    <img src="{% static 'images/work-3.jpg' %}" class="img-fluid" alt="Colorlib Template">
-  </div>
-  <div class="text text-center">
-    <span>Web Development</span>
-    <h3><a href="project.html">Web Design Concept &amp; Web Analysis</a></h3>
-  </div>
-  <a href="{% static 'images/work-3.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
-    <span class="fa fa-expand"></span>
-  </a>
-</div>
-</div>
-<div class="col-md-6 col-lg-3 ftco-animate">
-  <div class="project">
-   <div class="img">
-    <img src="{% static 'images/work-4.jpg' %}" class="img-fluid" alt="Colorlib Template">
-  </div>
-  <div class="text text-center">
-    <span>UI/UX Strategy</span>
-    <h3><a href="project.html">Strategy for Enduring Customer Relationships</a></h3>
-  </div>
-  <a href="{% static 'images/work-4.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
-    <span class="fa fa-expand"></span>
-  </a>
-</div>
+  {% endfor %}
+
 </div>
 
-<div class="col-md-6 col-lg-3 ftco-animate">
-  <div class="project">
-   <div class="img">
-    <img src="{% static 'images/work-5.jpg' %}" class="img-fluid" alt="Colorlib Template">
-  </div>
-  <div class="text text-center">
-    <span>Web Development</span>
-    <h3><a href="project.html">Best Solution for Information Technology</a></h3>
-  </div>
-  <a href="{% static 'images/work-5.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
-    <span class="fa fa-expand"></span>
-  </a>
-</div>
-</div>
-<div class="col-md-6 col-lg-3 ftco-animate">
-  <div class="project">
-   <div class="img">
-    <img src="{% static 'images/work-6.jpg' %}" class="img-fluid" alt="Colorlib Template">
-  </div>
-  <div class="text text-center">
-    <span>Web Application</span>
-    <h3><a href="project.html">Creative Idea Build Up</a></h3>
-  </div>
-  <a href="{% static 'images/work-6.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
-    <span class="fa fa-expand"></span>
-  </a>
-</div>
-</div>
-<div class="col-md-6 col-lg-3 ftco-animate">
-  <div class="project">
-   <div class="img">
-    <img src="{% static 'images/work-7.jpg' %}" class="img-fluid" alt="Colorlib Template">
-  </div>
-  <div class="text text-center">
-    <span>Web Development</span>
-    <h3><a href="project.html">Web Design Concept &amp; Web Analysis</a></h3>
-  </div>
-  <a href="{% static 'images/work-7.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
-    <span class="fa fa-expand"></span>
-  </a>
-</div>
-</div>
-<div class="col-md-6 col-lg-3 ftco-animate">
-  <div class="project">
-   <div class="img">
-    <img src="{% static 'images/work-8.jpg' %}" class="img-fluid" alt="Colorlib Template">
-  </div>
-  <div class="text text-center">
-    <span>UI/UX Strategy</span>
-    <h3><a href="project.html">Strategy for Enduring Customer Relationships</a></h3>
-  </div>
-  <a href="{% static 'images/work-8.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
-    <span class="fa fa-expand"></span>
-  </a>
-</div>
+
 </div>
 </div>
 <div class="row mt-5">

@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('{% static 'images/bg_3.jpg' %}');" data-stellar-background-ratio="0.5">
@@ -29,7 +28,10 @@
     <div class="col-md-3 d-flex align-self-stretch ftco-animate">
       <div class="media block-6 services d-block">
        <div class="line"></div>
-       <div class="icon"><span class="flaticon-web-programming"></span></div>
+        
+        {% comment %} <div class="icon"><span class="flaticon-web-programming"></span></div> {% endcomment %}
+        <img src="{{ item.icon_v2.url }}" alt="" width="60", height="53">
+
        <div class="media-body">
         <h3 class="heading mb-3">{{ item.title }}</h3>
         <p>{{ item.details }}</p>
@@ -38,36 +40,6 @@
     {% endfor %}
 
   </div>
-  <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-    <div class="media block-6 services d-block">
-     <div class="line"></div>
-     <div class="icon"><span class="flaticon-stats"></span></div>
-     <div class="media-body">
-      <h3 class="heading mb-3">Database Analysis</h3>
-      <p>A small river named Duden flows by their place and supplies.</p>
-    </div>
-  </div>    
-</div>
-<div class="col-md-3 d-flex align-self-stretch ftco-animate">
-  <div class="media block-6 services d-block">
-   <div class="line"></div>
-   <div class="icon"><span class="flaticon-secure"></span></div>
-   <div class="media-body">
-    <h3 class="heading mb-3">Server Security</h3>
-    <p>A small river named Duden flows by their place and supplies.</p>
-  </div>
-</div>      
-</div>
-
-<div class="col-md-3 d-flex align-self-stretch ftco-animate">
-  <div class="media block-6 services d-block">
-   <div class="line"></div>
-   <div class="icon"><span class="flaticon-presentation"></span></div>
-   <div class="media-body">
-    <h3 class="heading mb-3">UX/UI Strategy</h3>
-    <p>A small river named Duden flows by their place and supplies.</p>
-  </div>
-</div> 
 
 </div>
 </div>
@@ -93,7 +65,7 @@
     </div>
     <div class="text text-center">
       <span>{{ item.category.name }}</span>
-      <h3><a href="project.html">{{ item.title }}</a></h3>
+      <h3><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></h3>
     </div>
   </div>
   </div>
@@ -109,7 +81,7 @@
  <div class="container">
   <div class="row">
    <div class="col-lg-6 order-md-last">
-    <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image:url(images/about.jpg);">
+    <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-center mb-4 mb-sm-0" style="background-image:url({% static 'images/about.jpg' %});">
     </div>
     <div class="d-flex mt-3">
      <div class="img img-2 mr-md-2 w-100" style="background-image:url({% static 'images/about-1.jpg' %});"></div>
@@ -119,7 +91,7 @@
 
  <div class="col-lg-6">
   <div class="heading-section mb-5 mt-5 mt-lg-0">
-   <h2 class="mb-3">Frequently Asks Questions</h2>
+   <h2 class="mb-3">Plans & Pricing</h2>
  </div>
  <div id="accordion" class="myaccordion w-100" aria-multiselectable="true">
 

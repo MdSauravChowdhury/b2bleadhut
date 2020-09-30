@@ -1,10 +1,12 @@
 from django.db import models
 from fontawesome_5.fields import IconField
 from ckeditor.fields import RichTextField
+from django.shortcuts import reverse
 
 # Create your models here.
 class ServiceItem(models.Model):
     icon = IconField(blank=True, null=True)
+    icon_v2 = models.ImageField(upload_to="icon/img", blank=True, null=True)
     title = models.CharField(max_length=50, blank=True, null=True)
     details = models.CharField(max_length=50, blank=True, null=True)
 
@@ -19,6 +21,13 @@ class ServicePrice(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse("order", kwargs={"id": self.id})
+    
+
+# class ServiceContact(models.Model):
+#     item = models.ForeignKey(ServicePrice, on_delete=models.CASCADE)
 
 class Category(models.Model):
     name = models.CharField(blank=True, null=True , max_length=50)   
@@ -35,4 +44,35 @@ class StrategicWork(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def get_absolute_url(self):
+        return reverse("service_item", kwargs={"id": self.id})
+
+
+class TermsAndConditions(models.Model):
+    title = models.CharField(max_length=150, blank=True, null=True)
+    content = RichTextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.title
+
+        
+
+class PrivacyAndPolicy(models.Model):
+    title = models.CharField(max_length=150, blank=True, null=True)
+    content = RichTextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.title
+
+        
+
+class RefundPolicy(models.Model):
+    title = models.CharField(max_length=150, blank=True, null=True)
+    content = RichTextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.title
+
+        
     
